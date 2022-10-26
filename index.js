@@ -25,12 +25,12 @@ button.addEventListener("click",foo);
 //for active cases
 let active=document.createElement("div");
 active.setAttribute("id","active");
-let active1=document.createElement("div");
-active1.setAttribute("id","active1");
-let active2=document.createElement("div");
-active2.setAttribute("id","active2");
+let Death=document.createElement("div");
+Death.setAttribute("id","active1");
+let Recovered=document.createElement("div");
+Recovered.setAttribute("id","active2");
 //<div id="active">Total Number Of Active cases:123455</div>
-formgroup.append(input,button,active,active1,active2);
+formgroup.append(input,button,active,Death,Recovered);
 
 //For active cases
 
@@ -51,9 +51,9 @@ var index=res1.length-1;
 console.log(res1[index].Active);
 active.innerHTML=`Total Active cases:${res1[index].Active}`;
 console.log(res1[index].Deaths);
-active1.innerHTML=`Total deaths:${res1[index].Deaths}`;
+Death.innerHTML=`Total deaths:${res1[index].Deaths}`;
 console.log(res1[index].Recovered);
-active2.innerHTML=`Total recovered cases:${res1[index].Recovered}`;
+Recovered.innerHTML=`Total recovered cases:${res1[index].Recovered}`;
 } catch (error) {
   console.log(error);
 }
